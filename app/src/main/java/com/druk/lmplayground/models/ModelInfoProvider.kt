@@ -28,22 +28,40 @@ object ModelInfoProvider {
                 description = "1.5 billion parameters language model"
             ),
             ModelInfo(
-                name = "Llama3.2 1B",
+                name = "Llama3.2 1B Q4_K_M",
                 file = files?.firstOrNull { it.name == "Llama-3.2-1B-Instruct-Q4_K_M.gguf" },
                 remoteUri = Uri.parse("https://huggingface.co/lmstudio-community/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf?download=true"),
                 inputPrefix = "<|start_header_id|>user<|end_header_id|>\n\n",
                 inputSuffix = "<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
                 antiPrompt = arrayOf("<|eot_id|>"),
-                description = "1 billions parameters language model"
+                description = "1 billions parameters language model, 4 bit quantization"
             ),
             ModelInfo(
-                name = "Llama3.2 3B",
+                name = "Llama3.2 1B Q8_0",
+                file = files?.firstOrNull { it.name == "Llama-3.2-1B-Instruct-Q8_0.gguf" },
+                remoteUri = Uri.parse("https://huggingface.co/lmstudio-community/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q8_0.gguf?download=true"),
+                inputPrefix = "<|start_header_id|>user<|end_header_id|>\n\n",
+                inputSuffix = "<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                antiPrompt = arrayOf("<|eot_id|>"),
+                description = "1 billions parameters language model, 8 bit quantization"
+            ),
+            ModelInfo(
+                name = "Llama3.2 3B Q4_K_M",
                 file = files?.firstOrNull { it.name == "Llama-3.2-3B-Instruct-Q4_K_M.gguf" },
                 remoteUri = Uri.parse("https://huggingface.co/lmstudio-community/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf?download=true"),
                 inputPrefix = "<|start_header_id|>user<|end_header_id|>\n\n",
                 inputSuffix = "<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
                 antiPrompt = arrayOf("<|eot_id|>"),
-                description = "3 billions parameters language model"
+                description = "3 billions parameters language model, 4 bit quantization"
+            ),
+            ModelInfo(
+                name = "Llama3.2 3B Q8_0",
+                file = files?.firstOrNull { it.name == "Llama-3.2-3B-Instruct-Q8_0.gguf" },
+                remoteUri = Uri.parse("https://huggingface.co/lmstudio-community/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q8_0.gguf?download=true"),
+                inputPrefix = "<|start_header_id|>user<|end_header_id|>\n\n",
+                inputSuffix = "<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                antiPrompt = arrayOf("<|eot_id|>"),
+                description = "3 billions parameters language model, 8 bit quantization"
             ),
             ModelInfo(
                 name = "Gemma2 2B",
