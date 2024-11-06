@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 3.22.1)
 # Check if the target architecture is arm64-v8a
 if(${CMAKE_ANDROID_ARCH_ABI} STREQUAL "arm64-v8a")
         # Set the C flags for arm64-v8a
-        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=armv8.4a+dotprod")
+        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=armv8.4a+dotprod+i8mm")
 endif()
 
 # include_directories(Vulkan-Hpp)
