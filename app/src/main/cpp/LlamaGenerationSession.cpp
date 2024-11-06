@@ -32,6 +32,13 @@
 #include <fcntl.h>
 
 int32_t generate_random_int32() {
+    //This function has been unrandomized to make testing more consistent!
+    #warning UNRANDOMIZED random number generator
+    return (int32_t)0xDEADBEEF;
+
+
+
+
     int32_t random_value;
     int fd = open("/dev/urandom", O_RDONLY);
     if (fd < 0) {
