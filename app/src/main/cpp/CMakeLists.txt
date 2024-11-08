@@ -5,6 +5,11 @@
 # Sets the minimum CMake version required for this project.
 cmake_minimum_required(VERSION 3.22.1)
 
+# Enable compiler optimization with -Ofast
+# The flag -fno-finite-math-only is required to disable some optimization that rely on the
+# assumption that floating point math can't result in infinite
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Ofast -fno-finite-math-only")
+
 # Check if the target architecture is arm64-v8a
 if(${CMAKE_ANDROID_ARCH_ABI} STREQUAL "arm64-v8a")
         # Set the C flags for arm64-v8a
